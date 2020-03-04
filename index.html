@@ -5,11 +5,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polind</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="icons/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <header>
+        <div class="header-logo">
+            <a href="#">
+                <img class="header-logo-img" src="img/Logo.png" alt="polind-logo">
+                <p class="header-logo-name">Polind</p>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <ul class="header-list">
+                <li class="header-list-item"><a href="#">Guide</a></li>
+                <li class="header-list-item"><a href="#">Journey</a></li>
+                <li class="header-list-item"><a href="#">Hotels</a></li>
+                <li class="header-list-item"><a href="#">Travelers</a></li>
+                <div class="header-search">
+                    <form>
+                        <input type="checkbox" id="header-search-switcher" hidden>
+                        <input type="search" id="header-search-button">
+                        <label class="header-search-label" for="header-search-button"><i
+                                class="fas fa-search"></i></label>
+                    </form>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <h1 class="banner-title">Fall in love<span class="banner-title-red">with Poland</span></h1>
+            <p class="hero-subtitle>">Best way to find your perfect place in Poland</p>
+            <button type="button" class="header-btn">Search your place</button>
+        </section>
 
+        <section class="places">
+            <h2 class="places-title">Popular places to discover</h2>
+            <div class="places-row">
+                <article class="places-block">
+                    <img class="places-image places-side-image" src="#" alt="City">
+                    <h4 class="places-name places-hidden">City</h4>
+                    <p class="places-region places-hidden">Description</p>
+                    <button type="button" class="places-btn places-hidden">View offers</button>
+                </article>
+                <article class="places-block">
+                    <img class="places-image" src="#" alt="Zakopane">
+                    <h4 class="places-name places-secondary-name">Zakopane</h4>
+                    <p class="places-region places-secondary-region">Małopolskie</p>
+                    <button type="button" class="places-btn places-hidden">View offers</button>
+                </article>
+                <article class="places-block">
+                    <img class="places-image places-main-image" src="#" alt="Sandomierz">
+                    <h4 class="places-name main-name">Sandomierz</h4>
+                    <p class="places-region">Swietokrzyskie</p>
+                    <button type="button" class="places-btn">View offers</button>
+                </article>
+                <article class="places-block">
+                    <img class="places-image" src="#" alt="Sopot">
+                    <h4 class="places-name">Sopot</h4>
+                    <p class="places-region">Pomorskie</p>
+                    <button type="button" class="places-btn places-hidden">View offers</button>
+                </article>
+                <article class="places-block ">
+                    <img class="places-image places-side-image" src="#" alt="Forest">
+                    <h4 class="places-name places-hidden">Forest</h4>
+                    <p class="places-region places-hidden">Description</p>
+                    <button type="button" class="places-btn places-hidden">View offers</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="offers">
+            <h2 class="offers-title">Where you want to go?</h2>
+            <form class="offers-search">
+                <input type="search" id="offers-search-input" placeholder="Search place">
+                <label class="offers-search-button" for="offers-search-input"><i class="fas fa-search"></i></label>
+            </form>
+            <div class="offers-nav">
+                <ul class="offers-nav-left">
+                    <!--  -->
+                    <li class="offers-categories">
+                        <a href="#" class="offers-categories-links">Journey</a>
+                    </li>
+                    <li class="offers-categories">
+                        <a href="#" class="offers-categories-links">Travelers</a>
+                    </li>
+                    <li class="offers-categories">
+                        <a href="#" class="offers-categories-links">Guide</a>
+                    </li>
+                </ul>
+                <ul class="offers-nav-right">
+                    <!--  -->
+                    <li class="offers-cities">
+                        <a href="#" class="offers-cities-links">Mazury</a>
+                    </li>
+                    <li class="offers-cities">
+                        <a href="#" class="offers-cities-links">Cracow</a>
+                    </li>
+                    <li class="offers-cities">
+                        <a href="#" class="offers-cities-links">Zakopane</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper">
+                <div class="offers-palette">
+                    <article class="offers-palette-block">
+                        <img class="offers-palette-image" src="#" alt="Poznan">
+                        <h4 class="offers-palette-title">Poznan</h4>
+                        <p class="offers-palette-subtitle">Wielkopolskie</p>
+                        <button class="offers-palette-btn">View offers</button>
+                    </article>
+                    <article class="offers-palette-block">
+                        <img class="offers-palette-image" src="#" alt="Poznan">
+                        <h4 class="offers-palette-title">Warsaw</h4>
+                        <p class="offers-palette-subtitle">Mazowieckie</p>
+                        <button class="offers-palette-btn">View offers</button>
+                    </article>
+                    <article class="offers-palette-block">
+                        <img class="offers-palette-image" src="#" alt="Poznan">
+                        <h4 class="offers-palette-title">Wraclaw</h4>
+                        <p class="offers-palette-subtitle">Dolnoslaskie</p>
+                        <button class="offers-palette-btn">View offers</button>
+                    </article>
+                    <article class="offers-palette-block">
+                        <img class="offers-palette-image" src="#" alt="Poznan">
+                        <h4 class="offers-palette-title">Karpacz</h4>
+                        <p class="offers-palette-subtitle">Dolnoslaskie</p>
+                        <button class="offers-palette-btn">View offers</button>
+                    </article>
+                    <article class="offers-palette-block">
+                        <img class="offers-palette-image" src="#" alt="Poznan">
+                        <h4 class="offers-palette-title">Dolina Olczyska</h4>
+                        <p class="offers-palette-subtitle">Malopolskie</p>
+                        <button class="offers-palette-btn">View offers</button>
+                    </article>
+                    <article class="offers-palette-block">
+                        <img class="offers-palette-image" src="#" alt="Poznan">
+                        <h4 class="offers-palette-title">Kozy</h4>
+                        <p class="offers-palette-subtitle">Slaskie</p>
+                        <button class="offers-palette-btn">View offers</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="recomendation">
+            <h2 class="recomendation-title">Explore city</h2>
+            <div class="wrapper">
+                <article class="recomendation-article">
+                    <h3 class="recomendation-article-title">Sandomierz</h3>
+                    <p class="recomendation-article-text">Sandomierz is one of the oldest and historically most
+                        significant
+                        cities in Poland. Archeological finds around the city indicate that humans have inhabited the
+                        area
+                        since neolithic times. The city came into existence in the early Middle Ages, taking advantage
+                        of an
+                        exellent location at the junction of Vistula and San rivers, and on the path of important trade
+                        routes.
+                    </p>
+                    <p>The first known historical mention of the city comes from the eary 12th-century, when the
+                        chronicler
+                        Gallus Anonymus ranked it together with Kraków and Wrocław as one of the main cities of Poland.
+                        The
+                        teatement (ca 1115-1118) of Bolesław III Wrymouth, in which he divided Poland among his sons,
+                        designated Sandomierz as the capital of one of the resulting principalities, the Duchy of
+                        Sandomierz.</p>
+                    <!--Letters 'o' and 'l' in the specific words were changed to the original letters using Unicode-->
+                    <button type="button" class="recomendation-article-btn">Check offers</button>
+                </article>
+                <div class="recomendation-image">
+                    <img class="recomendation-image-main" src="#" alt="Sandomierz City">
+                </div>
+            </div>
+        </section>
+
+        <section class="follow">
+            <h2 class="follow-title">Enjoy your journey</h2>
+            <button type="button" class="follow-btn">Sing up</button>
+            <p class="follow-text">You can aslo sign up on our <a href="#" class="follow-newsletter">newsletter</a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <img class="footer-logo" src="img/Logo.png" alt="Polind Logo">
+        <p class="footer-text">All rights reserved by <a href="#" class="footer-link">symu.co</a></p>
+    </footer>
 </body>
 
 </html>
