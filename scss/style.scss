@@ -530,7 +530,7 @@ Recomendation
     position: relative;
     margin-top: 70px;
     background-color: #f8f9fb;
-    z-index: -2;
+    z-index: 0;
     &-bg-text {
         display: flex;
         flex-direction: column;
@@ -607,3 +607,81 @@ Recomendation
 Follow 
 
 */
+.follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 33.5vw;
+    width: 100%;
+    background: url(../img/follow.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-title {
+        font-size: 6.57rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 50px;
+    }
+    &-btn {
+        padding: 20px 45px;
+        border: 0 solid;
+        border-radius: 25px;
+        color: $btn-text;
+        background-color: $btn-bg-link;
+        margin-bottom: 50px;
+    }
+    &-btn:hover {
+        background-color: $btn-text;
+        color: #fff;
+    }
+    &-text {
+        font-size: 1.28rem;
+        color: #fff;
+    }
+    &-newsletter {
+        color: $btn-bg-link;
+    }
+    &-newsletter:hover {
+        color: #fff;
+    }
+}
+/*
+===================
+ Footer 
+=================== 
+*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 26vw;
+    position: relative;
+    &-bg-text {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        z-index: -1;
+        top: 0;
+        font-size: 23rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f8f9fb;
+        text-shadow: 0 0 125px rgba(141, 148, 169, 0.25);
+    }
+    &-logo {
+        margin-bottom: 30px;
+    }
+    &-text {
+        font-size: 1.71rem;
+        font-weight: 700;
+    }
+    &-link {
+        color: $text;
+        text-decoration: none;
+    }
+    &-link:hover {
+        color: $btn-text;
+    }
+}
