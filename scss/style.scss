@@ -177,14 +177,40 @@ html {
             color: $btn-text;
         }
     }
-}
-
-.header-search-label {
-    color: $btn-bg-link;
+    &-search {
+        position: relative;
+        &-label {
+            color: $btn-bg-link;
+            cursor: pointer;
+        }
+        &-button-search {
+            position: absolute;
+            right: 30px;
+            top: -4px;
+            display: none;
+            font-size: 1.28rem;
+            cursor: pointer;
+        }
+    }
 }
 
 #header-search-button {
+    position: absolute;
+    right: 20px;
+    top: -8px;
+    width: 470px;
+    padding: 3px 3px 3px 5px;
+    font-size: 1.28rem;
+    border: none;
+    border-radius: 15px;
     display: none;
+}
+
+#header-search-switcher:checked ~ #header-search-button {
+    display: block;
+}
+#header-search-switcher:checked ~ .header-search-button-search {
+    display: block;
 }
 
 .banner {
