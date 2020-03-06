@@ -131,6 +131,7 @@ table {
 }
 
 /* Colors */
+/* Adaptive sizes */
 /*
 ===================
  Basic 
@@ -300,10 +301,20 @@ button {
   background-color: #ffc74a;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 700;
 }
 .banner-btn:hover {
   background-color: #b98000;
   color: #fff;
+}
+@media only screen and (max-width: 1700px) {
+  .banner-title {
+    font-size: 4.57rem;
+    margin-top: -150px;
+  }
+  .banner-btn {
+    padding: 15px 35px;
+  }
 }
 
 /*
@@ -379,6 +390,30 @@ Places
 .places-main-region {
   color: #fff;
   bottom: 170px;
+}
+@media only screen and (max-width: 1700px) {
+  .places-btn {
+    padding: 15px 35px;
+  }
+  .places-main-name {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .places-name {
+    font-size: 2rem;
+  }
+  .places-main-name {
+    font-size: 2rem;
+    bottom: 150px;
+  }
+  .places-main-region {
+    bottom: 125px;
+  }
+  .places-btn {
+    padding: 10px 25px;
+    font-size: 0.8rem;
+  }
 }
 
 /*
@@ -478,7 +513,6 @@ Offers
 .offers-palette {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .offers-palette-block {
   display: flex;
@@ -561,6 +595,14 @@ Recomendation
   display: flex;
   padding-bottom: 100px;
 }
+@media only screen and (max-width: 1700px) {
+  .recomendation-bg-text {
+    font-size: 20rem;
+  }
+  .recomendation .wrapper {
+    max-width: 1000px;
+  }
+}
 .recomendation-article {
   margin: 15px;
   width: 50%;
@@ -590,16 +632,39 @@ Recomendation
   background-color: #b98000;
   color: #fff;
 }
+@media only screen and (max-width: 1700px) {
+  .recomendation-article-text {
+    margin-bottom: 25px;
+  }
+  .recomendation-article-text:last-of-type {
+    margin-bottom: 80px;
+  }
+  .recomendation-article-btn {
+    padding: 15px 35px;
+  }
+}
 .recomendation-image {
   position: relative;
   margin: 15px;
   width: 50%;
+}
+.recomendation-image-main {
+  width: 100%;
 }
 .recomendation-image-box {
   position: absolute;
   left: 35px;
   top: 30px;
   z-index: -1;
+  width: 100%;
+}
+@media only screen and (max-width: 1700px) {
+  .recomendation-image-main {
+    width: 90%;
+  }
+  .recomendation-image-box {
+    width: 90%;
+  }
 }
 
 /*
@@ -646,6 +711,11 @@ Follow
 .follow-newsletter:hover {
   color: #fff;
 }
+@media only screen and (max-width: 1700px) {
+  .follow-btn {
+    padding: 15px 35px;
+  }
+}
 
 /*
 ===================
@@ -685,4 +755,9 @@ Follow
 }
 .footer-link:hover {
   color: #b98000;
+}
+@media only screen and (max-width: 1700px) {
+  .footer-bg-text {
+    font-size: 17rem;
+  }
 }

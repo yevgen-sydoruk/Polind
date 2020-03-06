@@ -128,14 +128,32 @@ table {
 $btn-bg-link: #ffc74a;
 $btn-text: #b98000;
 $btn-active: #f8c759;
+
 $text: #606f81;
+$color-white: #fff;
+
+/* Adaptive sizes */
+
+$screen-exsm-min: 320px;
+$screen-exsm-max: 480px;
+
+$screen-sm-min: 576px;
+$screen-sm-max: 767px;
+
+$screen-md-min: 768px;
+$screen-md-max: 991px;
+
+$screen-lg-min: 992px;
+$screen-lg-max: 1199px;
+
+$screen-xl-min: 1200px;
+$screen-xl-max: 1700px;
 
 /*
 ===================
  Basic 
 =================== 
 */
-
 html {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -189,7 +207,7 @@ button {
             padding-right: 30px;
         }
         &-name {
-            color: #fff;
+            color: $color-white;
             font-size: 2.14rem;
             font-weight: 700;
         }
@@ -206,7 +224,7 @@ button {
         }
         &-item a {
             font-size: 1.28rem;
-            color: #fff;
+            color: $color-white;
             text-decoration: none;
         }
         &-item a:hover {
@@ -286,7 +304,7 @@ button {
         text-align: center;
         font-size: 6.57rem;
         font-weight: 700;
-        color: #fff;
+        color: $color-white;
         margin-top: -270px;
         &-red {
             color: #ed6950;
@@ -304,10 +322,22 @@ button {
         background-color: $btn-bg-link;
         text-transform: uppercase;
         text-decoration: none;
+        font-weight: 700;
     }
     &-btn:hover {
         background-color: $btn-text;
-        color: #fff;
+        color: $color-white;
+    }
+    @media only screen and (max-width: $screen-xl-max) {
+        &-title {
+            font-size: 4.57rem;
+            margin-top: -150px;
+        }
+        &-btn {
+            padding: 15px 35px;
+        }
+    }
+    @media only screen and (max-width: $screen-lg-max) {
     }
 }
 /*
@@ -327,7 +357,7 @@ Places
     &-title {
         margin-bottom: 50px;
         font-size: 1.28rem;
-        color: #fff;
+        color: $color-white;
     }
     &-row {
         display: flex;
@@ -356,7 +386,7 @@ Places
     &-name {
         font-size: 2.14rem;
         font-weight: 700;
-        color: #fff;
+        color: $color-white;
 
         position: absolute;
         bottom: 90px;
@@ -376,20 +406,47 @@ Places
         position: absolute;
         bottom: 40px;
     }
+
     &-btn:hover {
         background-color: $btn-text;
-        color: #fff;
+        color: $color-white;
     }
 
     &-main-name {
         font-size: 3.42rem;
         bottom: 200px;
     }
+
     &-main-region {
-        color: #fff;
+        color: $color-white;
         bottom: 170px;
     }
+    @media only screen and (max-width: $screen-xl-max) {
+        &-btn {
+            padding: 15px 35px;
+        }
+        &-main-name {
+            font-size: 2.3rem;
+        }
+    }
+    @media only screen and (max-width: $screen-lg-max) {
+        &-name {
+            font-size: 2rem;
+        }
+        &-main-name {
+            font-size: 2rem;
+            bottom: 150px;
+        }
+        &-main-region {
+            bottom: 125px;
+        }
+        &-btn {
+            padding: 10px 25px;
+            font-size: 0.8rem;
+        }
+    }
 }
+
 /*
 
 Offers 
@@ -445,7 +502,7 @@ Offers
 
                 &-links {
                     font-weight: 700;
-                    color: #fff;
+                    color: $color-white;
                     text-decoration: none;
                     background-color: #bdc8d9;
                     border-radius: 17px;
@@ -475,7 +532,7 @@ Offers
                     text-decoration: none;
                 }
                 &-links:hover {
-                    color: #fff;
+                    color: $color-white;
                     background-color: $btn-bg-link;
                 }
             }
@@ -487,7 +544,6 @@ Offers
     &-palette {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         &-block {
             display: flex;
             flex-direction: column;
@@ -497,7 +553,7 @@ Offers
             padding: 10px;
             box-sizing: border-box;
             box-shadow: 0 0 60px rgba(192, 192, 192, 0.5);
-            background-color: #fff;
+            background-color: $color-white;
             &-image {
                 width: 100%;
                 margin-bottom: 30px;
@@ -513,7 +569,7 @@ Offers
                 padding: 10px;
                 margin-bottom: 30px;
                 color: #bdc8d9;
-                background-color: #fff;
+                background-color: $color-white;
                 border: none;
                 box-shadow: 0 0 40px rgba(192, 192, 192, 0.5);
                 border-radius: 17px;
@@ -569,6 +625,14 @@ Recomendation
         display: flex;
         padding-bottom: 100px;
     }
+    @media only screen and (max-width: $screen-xl-max) {
+        &-bg-text {
+            font-size: 20rem;
+        }
+        .wrapper {
+            max-width: 1000px;
+        }
+    }
     &-article {
         margin: 15px;
         width: 50%;
@@ -595,18 +659,41 @@ Recomendation
         }
         &-btn:hover {
             background-color: $btn-text;
-            color: #fff;
+            color: $color-white;
+        }
+        @media only screen and (max-width: $screen-xl-max) {
+            &-text {
+                margin-bottom: 25px;
+            }
+            &-text:last-of-type {
+                margin-bottom: 80px;
+            }
+            &-btn {
+                padding: 15px 35px;
+            }
         }
     }
     &-image {
         position: relative;
         margin: 15px;
         width: 50%;
+        &-main {
+            width: 100%;
+        }
         &-box {
             position: absolute;
             left: 35px;
             top: 30px;
             z-index: -1;
+            width: 100%;
+        }
+        @media only screen and (max-width: $screen-xl-max) {
+            &-main {
+                width: 90%;
+            }
+            &-box {
+                width: 90%;
+            }
         }
     }
 }
@@ -628,7 +715,7 @@ Follow
     &-title {
         font-size: 6.57rem;
         font-weight: 700;
-        color: #fff;
+        color: $color-white;
         margin-bottom: 50px;
     }
     &-btn {
@@ -641,17 +728,22 @@ Follow
     }
     &-btn:hover {
         background-color: $btn-text;
-        color: #fff;
+        color: $color-white;
     }
     &-text {
         font-size: 1.28rem;
-        color: #fff;
+        color: $color-white;
     }
     &-newsletter {
         color: $btn-bg-link;
     }
     &-newsletter:hover {
-        color: #fff;
+        color: $color-white;
+    }
+    @media only screen and (max-width: $screen-xl-max) {
+        &-btn {
+            padding: 15px 35px;
+        }
     }
 }
 /*
@@ -693,5 +785,10 @@ Follow
     }
     &-link:hover {
         color: $btn-text;
+    }
+    @media only screen and (max-width: $screen-xl-max) {
+        &-bg-text {
+            font-size: 17rem;
+        }
     }
 }
