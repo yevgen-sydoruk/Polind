@@ -283,12 +283,13 @@ button {
   font-size: 6.57rem;
   font-weight: 700;
   color: #fff;
+  margin-top: -270px;
 }
 .banner-title-red {
   color: #ed6950;
 }
 .banner-subtitle {
-  margin-bottom: 55px;
+  margin-bottom: 80px;
   font-size: 1.28rem;
 }
 .banner-btn {
@@ -297,6 +298,8 @@ button {
   border-radius: 25px;
   color: #b98000;
   background-color: #ffc74a;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 .banner-btn:hover {
   background-color: #b98000;
@@ -429,17 +432,20 @@ Offers
   display: flex;
 }
 .offers-nav-left-categories {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 10px;
-  background-color: #bdc8d9;
-  border-radius: 17px;
 }
 .offers-nav-left-categories-links {
   font-weight: 700;
   color: #fff;
   text-decoration: none;
+  background-color: #bdc8d9;
+  border-radius: 17px;
+  padding: 10px;
 }
-.offers-nav-left-categories:hover {
+.offers-nav-left-categories-links:hover {
   background-color: #ffc74a;
 }
 .offers-nav-left-categories:last-of-type {
@@ -449,17 +455,20 @@ Offers
   display: flex;
 }
 .offers-nav-right-cities {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 10px;
-  border: 1px solid #ebeef4;
-  border-radius: 17px;
 }
 .offers-nav-right-cities-links {
+  padding: 10px;
+  border: 1px solid #ebeef4;
+  border-radius: 17px;
   font-weight: 700;
   color: #8d97a5;
   text-decoration: none;
 }
-.offers-nav-right-cities:hover {
+.offers-nav-right-cities-links:hover {
   color: #fff;
   background-color: #ffc74a;
 }
@@ -582,12 +591,15 @@ Recomendation
   color: #fff;
 }
 .recomendation-image {
+  position: relative;
   margin: 15px;
   width: 50%;
 }
-.recomendation-image-main {
-  outline-offset: 15px;
-  outline: 15px solid #ffc74a;
+.recomendation-image-box {
+  position: absolute;
+  left: 35px;
+  top: 30px;
+  z-index: -1;
 }
 
 /*
@@ -650,10 +662,10 @@ Follow
 }
 .footer-bg-text {
   position: absolute;
-  transform: translateX(-50%);
+  top: 50%;
   left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: -1;
-  top: 0;
   font-size: 23rem;
   font-weight: 700;
   text-transform: uppercase;
