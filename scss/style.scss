@@ -134,19 +134,10 @@ $color-white: #fff;
 
 /* Adaptive sizes */
 
-$screen-exsm-min: 320px;
 $screen-exsm-max: 480px;
-
-$screen-sm-min: 576px;
 $screen-sm-max: 767px;
-
-$screen-md-min: 768px;
 $screen-md-max: 991px;
-
-$screen-lg-min: 992px;
 $screen-lg-max: 1199px;
-
-$screen-xl-min: 1200px;
 $screen-xl-max: 1700px;
 
 /*
@@ -213,11 +204,13 @@ button {
         }
     }
     &-nav {
+        position: relative;
         display: flex;
         align-items: center;
         padding-right: 40px;
     }
     &-list {
+        position: relative;
         display: flex;
         &-item {
             margin-right: 50px;
@@ -231,8 +224,18 @@ button {
             color: $btn-text;
         }
     }
+    &-menu-label {
+        position: absolute;
+        right: 50px;
+        top: -2px;
+        color: $btn-bg-link;
+        cursor: pointer;
+        display: none;
+    }
+    &-menu-label:hover {
+        color: $btn-text;
+    }
     &-search {
-        position: relative;
         &-label {
             color: $btn-bg-link;
             cursor: pointer;
@@ -242,8 +245,8 @@ button {
         }
         &-button-search {
             position: absolute;
-            right: 50px;
-            top: -2px;
+            right: 90px;
+            top: 25px;
             display: none;
             cursor: pointer;
         }
@@ -275,12 +278,54 @@ button {
             top: 0;
         }
     }
+    @media only screen and (max-width: $screen-sm-max) {
+        &-logo {
+            &-img {
+                width: 25%;
+                padding-right: 15px;
+            }
+            &-name {
+                font-size: 1.2rem;
+            }
+        }
+        &-list {
+            display: none;
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            right: 10px;
+            top: 70px;
+            border: 1px solid $btn-bg-link;
+            &-item {
+                padding: 10px;
+                margin-right: 0;
+            }
+        }
+        &-menu-label {
+            display: block;
+            position: absolute;
+            top: 25px;
+            right: 40px;
+        }
+        &-search {
+            &-label {
+                position: absolute;
+                right: 70px;
+                top: 25px;
+            }
+
+            &-button-search {
+                right: 110px;
+                top: 24px;
+            }
+        }
+    }
 }
 
 #header-search-button {
     position: absolute;
-    right: 20px;
-    top: -16px;
+    right: 75px;
+    top: 10px;
     width: 470px;
     padding: 10px;
     font-size: 1.28rem;
@@ -291,10 +336,17 @@ button {
 @media only screen and (max-width: $screen-lg-max) {
     #header-search-button {
         position: absolute;
-        right: 20px;
-        top: -12px;
+        right: 70px;
+        top: 15px;
         width: 350px;
         font-size: 1rem;
+    }
+}
+@media only screen and (max-width: $screen-sm-max) {
+    #header-search-button {
+        position: absolute;
+        right: 95px;
+        top: 13px;
     }
 }
 
@@ -303,6 +355,9 @@ button {
 }
 #header-search-switcher:checked ~ .header-search-button-search {
     display: block;
+}
+#header-menu-switcher:checked ~ .header-list {
+    display: flex;
 }
 /*
 ===================
@@ -384,7 +439,16 @@ button {
     }
     @media only screen and (max-width: $screen-md-max) {
         &-title {
-            font-size: 3rem;
+            font-size: 2.8rem;
+        }
+        &-subtitle {
+            margin-bottom: 50px;
+        }
+    }
+    @media only screen and (max-width: $screen-sm-max) {
+        &-title {
+            font-size: 2.3rem;
+            margin-top: -90px;
         }
         &-subtitle {
             margin-bottom: 50px;
@@ -521,6 +585,16 @@ Places
             width: 80%;
         }
     }
+    @media only screen and (max-width: $screen-sm-max) {
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0 !important;
+        border: 0 !important;
+        height: 1px !important;
+        width: 1px !important;
+        overflow: hidden;
+    }
 }
 
 /*
@@ -547,6 +621,7 @@ Offers
             position: absolute;
             color: $btn-bg-link;
             transform: translateX(2000%);
+            cursor: pointer;
         }
     }
     #offers-search-input {
@@ -644,6 +719,9 @@ Offers
             //
         }
     }
+    @media only screen and (max-width: $screen-sm-max) {
+        margin-top: 50px;
+    }
     &-palette {
         display: flex;
         flex-wrap: wrap;
@@ -695,6 +773,14 @@ Offers
             &-block {
                 margin: 10px;
                 width: 47%;
+            }
+        }
+        @media only screen and (max-width: $screen-sm-max) {
+            flex-direction: column;
+            align-items: center;
+            &-block {
+                // margin: 10px;
+                width: 95%;
             }
         }
     }
@@ -922,6 +1008,16 @@ Follow
         &-title {
             font-size: 4.57rem;
             margin-bottom: 30px;
+        }
+    }
+    @media only screen and (max-width: $screen-sm-max) {
+        &-title {
+            font-size: 2.57rem;
+            margin-bottom: 30px;
+        }
+        &-btn {
+            padding: 10px 35px;
+            margin-bottom: 25px;
         }
     }
 }
